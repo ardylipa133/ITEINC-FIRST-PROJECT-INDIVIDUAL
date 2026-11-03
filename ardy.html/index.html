@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!-- This is the main page of the IFRAME -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two Column Iframe Layout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Main container */
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Left column - Navigation */
+        .menu {
+            width: 25%;
+            background-color: #333;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .menu h2 {
+            color: white;
+        }
+
+        .menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #555;
+        }
+
+        .menu a:hover {
+            background-color: #777;
+        }
+
+        /* Right column - Content */
+        .content {
+            width: 75%;
+        }
+
+        .content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .ContHeader { /* i've added a header here -just edit */
+            margin-block: 10;
+            color: tomato;
+            padding: 20px;
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            background-color: darkslategray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ContHeader">  <!-- header area  here -->
+       <h1> Main Heading Here! </h1>
+    </div>
+    <div class="container">
+
+        <!-- LEFT COLUMN -->
+        <div class="menu">
+            <h2>[Your Complete Name]</h2>
+
+            <a href="home.html" target="contentFrame">Home</a>
+            <a href="autobiography.html" target="contentFrame">About My Self</a>
+            <a href="gallery.html" target="contentFrame">Gallery</a>
+            <a href="contact.html" target="contentFrame">Contact</a>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="content">
+            <iframe
+                src="home.html"
+                name="contentFrame"
+                title="Page Content">
+            </iframe>
+            
+        </div>
+
+    </div>
+
+</body>
+</html>
